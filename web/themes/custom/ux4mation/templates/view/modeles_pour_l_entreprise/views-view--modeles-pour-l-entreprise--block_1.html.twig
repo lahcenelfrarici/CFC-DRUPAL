@@ -1,0 +1,16 @@
+{%
+  set classes = [
+    dom_id ? 'js-view-dom-id-' ~ dom_id,
+  ]
+%}
+
+<div {{ attributes.addClass(classes) }}>
+    <div class="row item--all-box--file" data-click="tabs1">
+        {% if rows -%}
+            {{ rows }}
+        {% elseif empty -%}
+            {{ empty }}
+        {% endif %}
+        {{ pager }}
+    </div>
+</div>

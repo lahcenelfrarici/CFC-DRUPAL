@@ -1,0 +1,7 @@
+name: Language Prefix Redirector
+type: module
+description: 'Adds default language prefix to URLs without a valid language prefix.'
+package: Custom
+core_version_requirement: ^9 || ^10
+dependencies:
+  - drupal:language

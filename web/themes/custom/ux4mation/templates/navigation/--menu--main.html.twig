@@ -1,0 +1,131 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a menu.
+ *
+ * Available variables:
+ * - menu_name: The machine name of the menu.
+ * - items: A nested list of menu items. Each menu item contains:
+ *   - attributes: HTML attributes for the menu item.
+ *   - below: The menu item child items.
+ *   - title: The menu link title.
+ *   - url: The menu link URL, instance of \Drupal\Core\Url
+ *   - localized_options: Menu link localized options.
+ *   - is_expanded: TRUE if the link has visible children within the current
+ *     menu tree.
+ *   - is_collapsed: TRUE if the link has children within the current menu tree
+ *     that are not currently visible.
+ *   - in_active_trail: TRUE if the link is in the active trail.
+ *
+ * @ingroup themeable
+ */
+#}
+{% import _self as menus %}
+
+{# Render the menu with custom classes and structure #}
+
+{{ menus.menu_links(items, attributes, 0) }}
+
+
+{% macro menu_links(items, attributes, menu_level) %}
+
+	{% if menu_level == 0 %}
+		<ul class="navbar-nav me-auto mb-2 mb-lg-0 m-auto gap-4">
+		{% else %}
+			<ul>
+			{% endif %}
+			{% for item in items %}
+				<li class="nav-item">
+					<a class="nav-link {% if item.in_active_trail %}active{% endif %}" aria-current="page" href="{{ item.url }}">{{ item.title }}</a>
+					{% if item.below %}
+						<div class="menu-subs-overlay menu-level-{{ menu_level + 1 }}">
+							<div class="menu-subs-inner">
+								<ul>
+									{% for sub_item in item.below %}
+										<li class="menu-subs-col">
+											<div class="menu--item">
+												<div class="menu--item-title">
+													<span>
+														<a href="{{ sub_item.url }}">{{ sub_item.title }}</a>
+													</span>
+												</div>
+												{% if sub_item.below %}
+													<div class="menu--item-subs menu-level-{{ menu_level + 2 }}">
+														<ul>
+															{% for sub_sub_item in sub_item.below %}
+																<li>
+																	<div class="sub-menu-item">
+																		<div class="sub-menu-item-title">
+																			<a href="{{ sub_sub_item.url }}">{{ sub_sub_item.title }}</a>
+																		</div>
+																	</div>
+																</li>
+															{% endfor %}
+														</ul>
+													</div>
+												{% endif %}
+											</div>
+										</li>
+									{% endfor %}
+								</ul>
+							</div>
+						</div>
+					{% endif %}
+				</li>
+			{% endfor %}
+		</ul>
+
+		{#  #}
+		<ul
+			id="menu-second-main-mobile" class="list list-unstyled list-product-nav" style="display:none">
+			{# mobile #}
+			{% for item in items %}
+				<!-- LE MINISTÈRE -->
+				<li class="loop-mobile">
+					{% if item.below %}
+						<a href="#" class="list-product-cat">{{ item.title }}<span class="glyphicon glyphicon-menu-down pull-right" aria-hidden="true">
+								<i class="fa fa-chevron-down"></i>
+							</span>
+						</a>
+					{% else %}
+						<a href="{{ item.url }}" class="list-product-cat no-arrow">{{ item.title }}<span class="glyphicon glyphicon-menu-down pull-right" aria-hidden="true">
+								<i class="fa fa-chevron-down"></i>
+							</span>
+						</a>
+					{% endif %}
+					{% set hasNochildren = [] %}
+					<ul class="list list-unstyled list-product-subnav">
+						{% for sub_item in item.below %}
+							{% if sub_item.below %}
+								<li class="menu-item-has-children li_with_arrow">
+									<a href="#" class="list-product-cat">{{ sub_item.title }}</a>
+									<ul class="list list-unstyled list-product-subnav">
+										<li class="list--href">
+											{% for ss_item in sub_item.below %}
+												{% if ss_item.url %}
+													<a  href="{{ ss_item.url }}">{{ ss_item.title }}</a>
+												{% endif %}
+											{% endfor %}
+										</li>
+									</ul>
+								</li>
+							{% else %}
+								{% set hasNochildren = hasNochildren|merge([sub_item]) %}
+							{% endif %}
+						{% endfor %}
+						<li class="menu-subs-col">
+							<div class="menu--items-no-child">
+								{% for itemNoChild in hasNochildren %}
+									<div class="menu--item-no-child">
+										<div class="menu--item-no-child-url">{{ link(itemNoChild.title, itemNoChild.url) }}</div>
+									</div>
+								{% endfor %}
+							</div>
+						</li>
+					</ul>
+					<!-- /.list-product-subnav -->
+				</li>
+			{% endfor %}
+		</ul>
+	{% endmacro %}
+	{#  #}

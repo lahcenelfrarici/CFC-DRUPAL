@@ -1,0 +1,44 @@
+global-css:
+  version: 1.x
+  css:
+    theme:
+      css/aos.css: {}
+      css/all.min.css: {}
+      css/bootstrap.min.css: {}
+      css/owl.carousel.min.css: {}
+      css/owl.theme.default.min.css: {}
+      css/styles.css: {}
+      css/weare.css: {}
+      css/how_we.css: {}
+      css/el_styles.css: {}
+      css/style_dr.css: {}
+      css/responsive.css: {}
+
+      # css/responsive.css: {}
+
+global-js:
+  version: 1.0
+  js:
+    js/bootstrap.bundle.min.js: {}
+    js/owl.carousel.min.js: {defer: true}
+    js/aos.js: {}
+    js/index.js: {}
+    js/index_el.js: {}
+    # js/ajax_scrolle.js: {}
+
+  dependencies:
+    - core/jquery
+
+global-css-rtl:
+  css:
+    theme:
+      css/style-rtl.css: {}
+
+global-css-responsive:
+  css:
+    theme:
+      css/responsive.css: {}
+
+# addtoany-js:
+#   js:
+#     js/page.js: {}

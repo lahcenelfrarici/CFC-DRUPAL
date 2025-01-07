@@ -1,0 +1,6 @@
+services:
+  custom_redirect.language_prefix_redirector:
+    class: Drupal\custom_redirect\LanguagePrefixRedirector
+    arguments: ['@language_manager', '@current_route_match']
+    tags:
+      - { name: event_subscriber }

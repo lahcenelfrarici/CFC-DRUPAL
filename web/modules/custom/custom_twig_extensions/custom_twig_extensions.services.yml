@@ -1,0 +1,6 @@
+# custom_twig_extensions.services.yaml
+services:  
+  custom_twig_extensions.twig.CustomTwigExtension:
+    class: Drupal\custom_twig_extensions\Service\CustomTwigExtension
+    tags:
+      - { name: twig.extension }              

@@ -1,0 +1,9 @@
+name: 'taxonomy aliases'
+type: module
+description: 'The aliases for pages with taxonomy term as argument'
+package: 'Custom'
+core_version_requirement: ^10
+dependencies:
+  - drupal:node
+  - drupal:block
+

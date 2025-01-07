@@ -1,0 +1,21 @@
+<section class="detail--box">
+  <div class="container">
+    <div class="row">
+      <div class="col mb-3">
+        {{ header.area }}
+      </div>
+      <div class="all-detail-box--wrapper">
+        <div class="sc-scroll click--tabs">
+          <!-- Loop -->
+          {{ rows }}
+        </div>
+        <div class="detail-box--wrapper">
+          {{ drupal_view('modeles_pour_l_entreprise','block_1') }}
+          
+          {{ drupal_view('modeles_pour_l_entreprise','block_2') }}
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

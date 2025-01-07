@@ -1,0 +1,15 @@
+{#
+/**
+ * @file
+ * The views infinite scroll pager template.
+ */
+#}
+
+{% if items.next %}
+  <div {{ attributes.addClass('col-lg-12') }} >
+    <!-- Button -->
+    <div class="link--btn text-center">
+      <a href="{{ items.next.href }}" class="btn btn-primary btn--main">{{ options.button_text }}</a>
+    </div>
+  </div>
+{% endif %}

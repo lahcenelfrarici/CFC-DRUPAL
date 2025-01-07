@@ -1,0 +1,33 @@
+<section class="detail--box-infographie">
+    <div class="container">
+        <div class="detail-box--wrapper">
+            <div class="card--detail">
+            <div class="detail-subtitle">
+                {{content.body}}
+            </div>
+            <div class="card--detail--infographie">
+                {{ content.field_image }}
+            </div>
+            </div>
+            <!-- Share buttons -->
+            <div class="share-links a2a_kit a2a_kit_size_32 a2a_default_style">
+            <div class="h4">{{ "Partager"|t }}</div>
+
+            <!-- Links -->
+            <a href="#" title="{{ "Partagez sur Facebook"|t }}" class="btn btn-outline-info a2a_button_facebook"
+                data-toggle="tooltip" data-placement="top"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" title="{{ "Partagez sur LinkedIn"|t }}" class="btn btn-outline-info a2a_button_linkedin"
+                data-toggle="tooltip" data-placement="top"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#" title="{{ "Partagez sur WhatsApp"|t }}" class="btn btn-outline-info a2a_button_whatsapp"
+                data-toggle="tooltip" data-placement="top"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="#" title="{{ "click to copy"|t }}" class="text-info btn btn-outline-info clipboard" data-toggle="tooltip"
+                data-placement="top"><i class="fas fa-link"></i></a>
+            <a href="#" title="{{ "Partagez par Email"|t }}" class="btn btn-outline-info a2a_button_email" data-toggle="tooltip"
+                data-placement="top"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+        </div>
+        <!--  -->
+        {{ drupal_view('infographies','block_1') }}
+    </div>
+    <!--  -->
+</section>

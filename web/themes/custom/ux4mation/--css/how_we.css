@@ -1,0 +1,84 @@
+
+.box .content-box {
+  position: relative;
+  margin-top: 12%;
+  height: auto;
+  padding: 20px;
+  background-color: white;
+  border-left: 5px solid #1abc9c; /* Adjust color as needed */
+}
+ .how_rigth img{
+  width: 90%;
+}
+ .how_left img{
+  width: 90%;
+}
+.how_rigth {
+  position: absolute;
+  right: 70px;
+}
+.how_left {
+  position: relative;
+  left: 127px;
+}
+.bottom {
+  margin-bottom: 30px !important; /* Space between rows */
+}
+
+
+.jack-lorem {
+  position: absolute;
+  top: 0px;
+  left: 40%;
+  line-height: 100px;
+  display: flex;
+  align-items: center;
+  width: 99px;
+  height: 31px;
+  -webkit-text-stroke: 0.8px #111;
+}
+.skill-iconslinkedin {
+  position: absolute;
+  top: 67px;
+  left: 40%;
+  width: 26px;
+  height: 26px;
+  overflow: hidden;
+}
+.head-of-lorem {
+  position: absolute;
+  top: 31px;
+  left: 40%;
+  line-height: 29px;
+  font-family: Poppins;
+  color: #403b3b;
+  display: inline-block;
+  width: 125px;
+  height: 26px;
+}
+.handsome-blond-guy-with-blue-e-icon {
+  position: absolute;
+  height: 83.87%;
+  width: 31.4%;
+  top: 8.6%;
+  right: 68.6%;
+  bottom: 7.53%;
+  left: 0%;
+  border-radius: 10000px;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: cover;
+}
+.jack-lorem-parent {
+  width: 100%;
+  position: relative;
+  height: 93px;
+  text-align: left;
+  font-size: 16px;
+  color: #111;
+  font-family: Nasalization;
+}
+
+
+ 

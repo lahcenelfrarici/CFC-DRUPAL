@@ -1,0 +1,65 @@
+<?php 
+
+use Drupal\Core\Datetime\DrupalDateTime;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Cache\CacheBackendInterface;
+use Drupal\Core\StringTranslation\TranslatableMarkup;
+
+
+/**
+ * Implements hook_taxonomy_term_update().
+ */
+function taxonomy_aliases_taxonomy_term_update($term) {
+  update_alias($term);
+}
+
+/**
+ * Implements hook_taxonomy_term_insert().
+ */
+function taxonomy_aliases_taxonomy_term_insert($term) {
+  update_alias($term);
+}
+
+function update_alias($term) {
+  if($term->bundle() == 'category_videos') {
+    $aliases = [
+      'category_videos' => [
+        'ar' => '/الموارد/الفيديوهات/',
+        'fr' => '/ressources/videotheque/',
+      ],
+    ];
+
+    $term_name = $term->getName();
+    $langcode = $term->language()->getId();
+
+    // Only transliterate if the language is not Arabic
+    if ($langcode != 'ar') {
+      $term_name = \Drupal::service('pathauto.alias_cleaner')->cleanString($term_name);
+    }else{
+      $term_name = str_replace(' ','-',$term_name);
+    }
+
+    $alias = $aliases[$term->bundle()][$langcode] . $term_name;
+    $path = $aliases[$term->bundle()]['fr'] . $term->id();
+    
+    $existing_alias = \Drupal::service('path_alias.repository')->lookupByAlias($alias, $langcode);
+    
+    if (!$existing_alias) {
+      try {
+        $path_alias = \Drupal\path_alias\Entity\PathAlias::create([
+          'path' => $path,
+          'alias' => $alias,
+          'langcode' => $langcode,
+        ]);
+        $path_alias->save();
+      } catch (\Exception $e) {
+        // Log a message that the alias was not created.
+        \Drupal::logger('custom_alias')->error('Failed to create alias for taxonomy term ID @tid in language @lang: @error', [
+          '@tid' => $term->id(),
+          '@lang' => $langcode,
+          '@error' => $e->getMessage(),
+        ]);
+      }
+    }
+  }
+}

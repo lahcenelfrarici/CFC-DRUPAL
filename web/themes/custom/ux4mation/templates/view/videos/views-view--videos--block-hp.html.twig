@@ -1,0 +1,55 @@
+{#
+/**
+ * @file
+ * Default theme implementation for main view template.
+ *
+ * Available variables:
+ * - attributes: Remaining HTML attributes for the element.
+ * - css_name: A CSS-safe version of the view name.
+ * - css_class: The user-specified classes names, if any.
+ * - header: The optional header.
+ * - footer: The optional footer.
+ * - rows: The results of the view query, if any.
+ * - empty: The content to display if there are no rows.
+ * - pager: The optional pager next/prev links to display.
+ * - exposed: Exposed widget form/info to display.
+ * - feed_icons: Optional feed icons to display.
+ * - more: An optional link to the next page of results.
+ * - title: Title of the view, only used when displaying in the admin preview.
+ * - title_prefix: Additional output populated by modules, intended to be
+ *   displayed in front of the view title.
+ * - title_suffix: Additional output populated by modules, intended to be
+ *   displayed after the view title.
+ * - attachment_before: An optional attachment view to be displayed before the
+ *   view content.
+ * - attachment_after: An optional attachment view to be displayed after the
+ *   view content.
+ * - dom_id: Unique id for every view being printed to give unique class for
+ *   JavaScript.
+ *
+ * @see template_preprocess_views_view()
+ *
+ * @ingroup themeable
+ */
+#}
+
+
+<section class="list--video">
+    <div class="container">
+        <div class="row">
+            <div class="title-wrapper text-center">
+                <h2>{{ view.getTitle()|t }}</h2>
+            </div>
+            <div class="slider-center owl-carousel owl-theme" data-aos="fade-up" data-aos-duration="1000">
+            <!-- Carousel item with video -->
+                {% if rows %}
+                    {{ rows }}
+                {% endif %}
+            <!-- Repeat for other items with different video IDs -->
+            </div>
+            <div class="link--btn text-center" data-aos="fade-up" data-aos-duration="1000">
+            <a href="{{ path('view.video_categories.page_1') }}" class="btn btn-primary btn--main">{{ "Show more"|t }}</a>
+            </div>
+        </div>
+    </div>
+</section>

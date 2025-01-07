@@ -1,0 +1,6 @@
+name: "Custom Twig Extensions"
+type: module
+description: "Create Custom Twig Extensions"
+package: "Custom"
+core_version_requirement: ^9 || ^10
+dependencies:

@@ -1,0 +1,464 @@
+
+.fixed-column {
+  height: 100vh; /* Assure que la colonne fixe occupe toute la hauteur de la vue */
+  position: sticky;
+  top: 0;
+  background-color: #f8f9fa;
+  padding: 20px;
+}
+.scroll-column {
+  height: 100vh; /* Pour que la colonne de défilement occupe toute la hauteur de la vue */
+  overflow-y: scroll; /* Permettre le défilement vertical */
+  scrollbar-width: none; /* Pour Firefox */
+  -ms-overflow-style: none; /* Pour Internet Explorer et Edge */
+  padding: 20px;
+  background-color: #e9ecef;
+}
+
+/* Pour Chrome, Safari, et autres WebKit */
+.scroll-column::-webkit-scrollbar {
+  display: none;
+}
+
+
+
+/* General header styling */
+header {
+  background-color: #ffffff;
+  color: white;
+}
+
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+  font-family: Poppins;
+
+}
+
+/* Logo styling */
+#brand-logo {
+  max-height: 50px;
+}
+
+/* Navigation styling */
+.nav-link {
+  color: rgb(0, 0, 0);
+}
+
+.nav-link:hover {
+  color: #f39c12;
+  /* Optional: Change color on hover */
+}
+
+/* Hamburger Icon Styling */
+#hamburger-icon {
+  cursor: pointer;
+}
+
+#hamburger-icon .bar1,
+#hamburger-icon .bar2,
+#hamburger-icon .bar3 {
+  width: 30px;
+  height: 3px;
+  background-color: white;
+  margin: 5px 0;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+/* Mobile Menu Styling */
+.mobile-menu {
+  display: none;
+  background-color: #333;
+  position: absolute;
+  width: 100%;
+  top: 60px;
+  /* Adjust based on header height */
+  left: 0;
+}
+
+.mobile-menu ul {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.mobile-menu li {
+  margin: 10px 0;
+}
+
+.mobile-menu a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  display: block;
+}
+
+footer ul li {
+
+  line-height: 3;
+}
+
+.mobile-menu a:hover {
+  background-color: #f39c12;
+  /* Optional: Change background on hover */
+}
+
+/* Show mobile menu when toggled */
+.mobile-menu.show {
+  display: block;
+}
+
+.shadow-lg {
+  box-shadow: 0 1rem 3rem rgb(255 255 255 / 18%) !important;
+}
+
+.shadow-dark {
+  box-shadow: 0 1rem 3rem rgb(0 0 0 / 18%) !important;
+}
+
+.services {
+  opacity: 0.9;
+  background: var(--Header, linear-gradient(163deg, #5704E0 7.78%, #F331EA 57.07%, #9E0099 83.37%, #950085 169.96%));
+}
+
+#customers-testimonials .item {
+
+  margin-bottom: 50px;
+  padding: 15px;
+  opacity: .2;
+  transform: scale3d(0.8, 0.8, 1);
+  transition: all 0.3s ease-in-out;
+  background-color: #FFF;
+  border-radius: 3px;
+}
+
+#customers-testimonials .owl-item.active.center .item {
+  opacity: 1;
+  transform: scale3d(1.0, 1.0, 1);
+  background-color: #FFF;
+}
+
+#customers-services .item {
+
+  margin-bottom: 50px;
+  padding: 15px;
+  opacity: .2;
+  transform: scale3d(0.8, 0.8, 1);
+  transition: all 0.3s ease-in-out;
+  background-color: #FFF;
+  border-radius: 3px;
+}
+
+#customers-services .owl-item.active.center .item {
+  opacity: 1;
+  transform: scale3d(1.0, 1.0, 1);
+  background-color: #FFF;
+}
+
+.owl-carousel .owl-item img {
+  transform-style: preserve-3d;
+  max-width: 300px;
+
+}
+
+img.disable-color.logo {
+  transform-style: preserve-3d;
+  max-width: 150px;
+
+}
+
+.custom-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.custom-pagination button {
+  background-color: white;
+  border: 1px solid #ffffff00;
+  padding: 10px;
+  background: #FFF;
+   cursor: pointer;
+  margin: 0 15px;
+}
+
+.custom-pagination .prev-btn {
+  color: #a855f7;
+}
+
+.custom-pagination .next-btn {
+  color: #9333ea;
+}
+
+.custom-pagination .counter {
+  color: white;
+  font-weight: bold;
+}
+
+/* Ajout de styles pour le toggle mobile */
+.mobile-menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #912FD1;
+}
+
+
+.mobile-menu {
+  display: none;
+}
+
+.mobile-menu.open {
+  display: block;
+}
+
+.disable-color {
+  filter: grayscale(1.0);
+}
+
+
+@media (max-width: 767px) {
+  .mobile-menu-toggle {
+    display: block;
+  }
+}
+img.testi {
+    display: inline !important;
+    width: auto !important;
+}
+.services .row{
+  margin-top: 0px !important;
+}
+
+.btn-link{
+  color: #FFF;
+}
+.team{
+
+    padding: 40px;
+    border-radius: 20px;
+    background: #FFF;
+    box-shadow: 0px -1px 73.1px 0px rgba(0, 0, 0, 0.15);
+  }
+#team{
+ justify-content: center;display: flex;
+}
+
+.section-padding {
+  padding: 60px 0px 60px 0px;
+}
+
+
+.brand-carousel {
+  background: #ffffff;
+  margin-top: 10px;
+}
+
+.owl-dots {
+  text-align: center;
+}
+
+.owl-dot {
+  display: inline-block;
+  height: 15px !important;
+  width: 15px !important;
+  background-color: #222222 !important;
+  opacity: 0.8;
+  border-radius: 50%;
+  margin: 0 5px;
+}
+
+/* .owl-dot.active {
+  background-color: #FF170F !important;
+} */
+
+
+
+/* ignore the code below */
+
+
+.link-area {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  padding: 15px;
+  border-radius: 40px;
+  background: tomato;
+}
+
+.link-area a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 25px;
+}
+
+
+
+
+
+
+
+
+
+.card {
+  width: 300px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+}
+
+.card-header {
+  padding: 0px !important;
+  position: relative;
+}
+
+.card-header img {
+  width: 100%;
+  height: auto;
+}
+
+.card-header .icon {
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #5B2B82;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.card-header .icon img {
+  width: 24px;
+  height: 24px;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card-body h3 {
+  margin: 20px 0 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.card-body .position {
+  font-style: italic;
+  color: #888;
+  margin-bottom: 15px;
+}
+
+.card-body .description {
+  font-size: 14px;
+  color: #777;
+}
+
+
+button.owl-prev {
+  right: 100%;
+  position: absolute;
+  top: 50%;
+}
+
+button.owl-next {
+  left: 100%;
+  position: absolute;
+  top: 50%;
+}
+
+.number-text {
+  font-family: sans-serif;
+  /* Replace with your font if different */
+  font-weight: 700;
+  /* Bold */
+}
+
+.number {
+  font-size: 8rem;
+  -webkit-text-stroke: 1px white;
+  -webkit-text-fill-color: white;
+  -webkit-text-stroke-width: 1;
+  -webkit-text-stroke-color: #B62897;
+}
+
+.left {
+  text-align: left;
+}
+
+.work {
+
+  font-size: 32px;
+
+  line-height: 56px;
+  font-family: Nasalization;
+  background: linear-gradient(92.8deg, #5505d9, #a400a9 36.87%, #9e0099 58.5%, #950085);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+}
+
+.card-clientleft.in-view {
+  border: 1px rgba(159, 1, 153, 0.45) solid;
+  margin: 11px;
+  opacity: 1;
+  transform: translateX(0);
+  /* L'élément revient à sa position initiale */
+}
+
+p {
+  margin-bottom: 0px;
+}
+
+.rectangle-div {
+  width: 100%;
+  position: relative;
+  background-color: rgba(159, 48, 184, 0.12);
+  height: 2px;
+}
+
+.card-clientright.in-view {
+  border: 1px rgba(159, 1, 153, 0.45) solid;
+  margin: 11px;
+  opacity: 1;
+  transform: translateX(0);
+  /* L'élément revient à sa position initiale */
+}
+
+/* Specific styles for sliding in from the left */
+.card-clientleft {
+  transition: opacity 1s ease-out, transform 1s ease-out;
+  transform: translateX(-100%);
+  /* Start off-screen to the left */
+  animation-name: slideInFromLeft;
+}
+
+/* Specific styles for sliding in from the right */
+.card-clientright {
+  transition: opacity 1s ease-out, transform 1s ease-out;
+  transform: translateX(100%);
+  /* Start off-screen to the right */
+  animation-name: slideInFromRight;
+}
+
+/* Keyframes for sliding in from the left */
+@keyframes slideInFromLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+    /* End at original position */
+  }
+}
+
+/* Keyframes for sliding in from the right */
+@keyframes slideInFromRight {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+    /* End at original position */
+  }
+}
