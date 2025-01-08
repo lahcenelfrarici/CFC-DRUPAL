@@ -1,0 +1,223 @@
+{#
+/**
+ * @file
+ * Default theme implementation for main view template.
+ *
+ * Available variables:
+ * - attributes: Remaining HTML attributes for the element.
+ * - css_name: A CSS-safe version of the view name.
+ * - css_class: The user-specified classes names, if any.
+ * - header: The optional header.
+ * - footer: The optional footer.
+ * - rows: The results of the view query, if any.
+ * - empty: The content to display if there are no rows.
+ * - pager: The optional pager next/prev links to display.
+ * - exposed: Exposed widget form/info to display.
+ * - feed_icons: Optional feed icons to display.
+ * - more: An optional link to the next page of results.
+ * - title: Title of the view, only used when displaying in the admin preview.
+ * - title_prefix: Additional output populated by modules, intended to be
+ *   displayed in front of the view title.
+ * - title_suffix: Additional output populated by modules, intended to be
+ *   displayed after the view title.
+ * - attachment_before: An optional attachment view to be displayed before the
+ *   view content.
+ * - attachment_after: An optional attachment view to be displayed after the
+ *   view content.
+ * - dom_id: Unique id for every view being printed to give unique class for
+ *   JavaScript.
+ *
+ * @see template_preprocess_views_view()
+ *
+ * @ingroup themeable
+ */
+#}
+
+  <section class="banner--bg sc--test " id="social--1">
+    {# <div class="img--banner">
+      <img src="\themes\custom\ux4mation\public\images\Frame 49.png">
+
+    </div> #}
+      {{ drupal_entity('block','ux4mation_bannersocialresponsability') }}
+    </div>
+
+  </section>
+  <section class="transform section-padding img--slider-scroll" id="social--2">
+
+    {# <div class="fluid we-are">
+      <div class="icon--left-left">
+        <img src="\themes\custom\ux4mation\public\images\left--icon-1.png">
+      </div>
+      <div class="row">
+        <div class="col-sm-6">
+          <h1 class="main-heading">Our CSR Commitment</h1>
+          <p>Sed ut unde omnis iste natus error sit voluptatemaccusantium doloremque laudantium sed ut unde omnis iste
+            natus.</p>
+          <p class="mt-3">Lorem ipsum dolor ipsum dolorLorem ipsum dolor ipsum dolorLorem ipsum dolor ipsum dolorLorem
+            ipsum dolor ipsum dolorLorem ipsum dolor ipsum dolorLorem ipsumLorem ipsum dolor ipsum dolorLore.
+            m dolorLorem ipsumLorem ipsum dolor ipsum dolorLorem ipsum dolor ipsum dolorLorem ipsum dolor.Lorem ipsum
+            dolor ipsum dolorLorem ipsum dolor ipsum dolorLorem ipsum dolor ipsum dolorLorem ipsum dolor ipsum
+            dolorLorem ipsum dolor ipsu.</p>
+          <a class="custom-button-link">ServiceNow</a>
+        </div>
+        <div class="col-sm-6">
+
+          <div class="container">
+            <!-- Carousel -->
+            <div id="customers_work_1" class="owl-carousel">
+              <!-- Service Items -->
+              <div class="item shadow-lg   bg-white rounded service-item">
+                <div class="img--card">
+                  <img src="\themes\custom\ux4mation\public\images\banner__2.png" alt="Image 1">
+                </div>
+              </div>
+              <div class="item shadow-lg   bg-white rounded service-item">
+                <div class="img--card">
+                  <img src="\themes\custom\ux4mation\public\images\banner__2.png" alt="Image 1">
+                </div>
+              </div>
+              <div class="item shadow-lg   bg-white rounded service-item">
+                <div class="img--card">
+                  <img src="\themes\custom\ux4mation\public\images\banner__2.png" alt="Image 1">
+                </div>
+              </div>
+              <div class="item shadow-lg   bg-white rounded service-item">
+                <div class="img--card">
+                  <img src="\themes\custom\ux4mation\public\images\banner__2.png" alt="Image 1">
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+    </div> #}
+    {{ drupal_entity('block','ux4mation_ourcsrcommitment') }}
+  </section>
+  <section class="section-padding sc--Leadership" id="social--3">
+    {# <div class="container">
+      <div class="row">
+        <div class="col-sm-12 mt-5">
+          <div class="text-center">
+
+            <h1><b>Economic & Social impact</b></h1>
+
+            <p class="mt-5">Lorem ipsum dolor ipsum dolorLorem ipsum dolor ipsum dolorLorem ipsum dolor ipsum dolorLorem
+              ipsum dolor ipsum dolorLorem ipsum dolor ipsum dolorLorem ipsumLorem ipsum dolor ipsum dolorLore.
+              m dolorLorem ipsumLorem ipsum dolor ipsum dolorLorem ipsum dolor ipsum dolorLorem ipsum dolor ipsum
+              dolorLorem ipsum dolor ipsum</p>
+          </div>
+        </div>
+
+      </div>
+      <div class="row">
+        <div class="showing--class">
+          <div class="col--left">
+            <h2>Youth employment</h2>
+            <p>Lorem ipsum dolor ipsum dolorLorem ipsum dolor ipsum dolorLorem ipsum dolor ipsum dolorLorem ipsum dolor
+              ipsum dolorLorem ipsum dolor ipsum dolorLorem ipsumLorem ipsum dolor ipsum dolorLore.
+              m dolorLorem ipsumLorem ipsum dolor ipsum dolorLorem ipsum dolor ipsum</p>
+            <img src="\themes\custom\ux4mation\public\images\banner___5.png">
+          </div>
+          <div class="col-right">
+            <img src="\themes\custom\ux4mation\public\images\Group 35606.png">
+          </div>
+        </div>
+        <div class="showing--class">
+          <div class="col--left">
+            <h2>Youth employment</h2>
+            <p>Lorem ipsum dolor ipsum dolorLorem ipsum dolor ipsum dolorLorem ipsum dolor ipsum dolorLorem ipsum dolor
+              ipsum dolorLorem ipsum dolor ipsum dolorLorem ipsumLorem ipsum dolor ipsum dolorLore.
+              m dolorLorem ipsumLorem ipsum dolor ipsum dolorLorem ipsum dolor ipsum</p>
+            <img src="\themes\custom\ux4mation\public\images\banner___5.png">
+          </div>
+          <div class="col-right">
+            <img src="\themes\custom\ux4mation\public\images\Group 35606.png">
+          </div>
+        </div>
+
+
+      </div>
+    </div> #}
+        {{ drupal_entity('block','ux4mation_economicsocialimpact') }}
+  </section>
+  <section class="services section-padding"  id="social--4">
+    {# <div class="container">
+        <div class="row">
+            <div class="col-sm-12 ">
+                <div class="row">
+                    <div class="col-sm-2">
+                        <!-- Empty Column for Spacing -->
+                    </div>
+                    <div class="col-sm-8 text-center">
+                        <div class="container col--1-card">
+                            <img src="\themes\custom\ux4mation\public\images\g1.png" alt="Know-How"><h2>for nonprofit</h2>
+                        </div>
+                        <div class="container-fluid px-3 px-sm-5 my-5">
+                          <p><strong>DolorLorem ipsum dolor ipsum dolorLorem ipsum </strong> </p>
+                            <p>Lorem ipsum dolor ipsum dolorLorem ipsum dolor ipsum dolorLorem ipsum dolor ipsum
+                                dolorLorem ipsum dolor ipsum dolor</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="fluid container">
+          <div class="row">
+              <div class="col-sm-7">
+                  <div class="video-wrapper">
+                      <iframe src="https://www.youtube.com/embed/7w0DU_58FV0" frameborder="0"
+                          allowfullscreen></iframe>
+                  </div>
+              </div>
+              <div class="col-sm-5 custom-content">
+                    <p>Lorem ipsum dolor ipsum dolorLorem ipsum dolor ipsum dolorLorem ipsum dolor ipsum dolorLorem ipsum dolor ipsum dolorLorem ipsum dolor ipsum dolorLorem ipsumLorem ipsum dolor ipsum dolorLore.
+                      m dolorLorem ipsumLorem ipsum dolor ipsum dolorLorem ipsum dolor ipsum dolorLorem ipsum dolor
+
+                       dolorLorem ipsum dolor ipsumLorem ipsum dolor ipsum dolorLorem ipsum dolor ipsum dolorLorem ipsum dolor ipsum dolorLorem ipsum dolor ipsum dolorLorem ipsum dolor ipsum dolorLorem ipsumLorem ipsum dolor ipsum dolorLore.
+                      m dolorLorem ipsumLorem ipsum dolor ipsum dolorLorem ipsum dolor ipsum dolorLorem ipsum dolor ipsum dolorLorem ipsum dolor ipsum</p>
+              </div>
+          </div>
+      </div>
+    </div> #}
+       {{ drupal_entity('block','ux4mation_nonprofit') }}
+
+</section>
+<section class="logo section-padding" id="social--5">
+
+  {# <div class="brand-carousel section-padding owl-carousel" style="background-color: #FEF8FB;">
+      <div class="single-logo">
+          <img src="\themes\custom\ux4mation\public\images\atos.png" class="disable-color logo">
+      </div>
+      <div class="single-logo">
+          <img src="\themes\custom\ux4mation\public\images\atos.png" class="disable-color logo">
+      </div>
+      <div class="single-logo">
+          <img src="\themes\custom\ux4mation\public\images\atos.png" class="disable-color logo">
+      </div>
+      <div class="single-logo">
+          <img src="\themes\custom\ux4mation\public\images\atos.png" class="disable-color logo">
+      </div>
+      <div class="single-logo">
+          <img src="\themes\custom\ux4mation\public\images\atos.png" class="disable-color logo">
+      </div>
+      <div class="single-logo">
+          <img src="\themes\custom\ux4mation\public\images\atos.png" class="disable-color logo">
+      </div>
+      <div class="single-logo">
+          <img src="\themes\custom\ux4mation\public\images\atos.png" class="disable-color logo">
+      </div>
+      <div class="single-logo">
+          <img src="\themes\custom\ux4mation\public\images\atos.png" class="disable-color logo">
+      </div>
+      <div class="single-logo">
+          <img src="\themes\custom\ux4mation\public\images\atos.png" class="disable-color logo">
+      </div>
+  </div> #}
+
+		{{ drupal_entity('block','ux4mation_section3logoslider') }}
+
+
+
+</section>

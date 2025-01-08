@@ -1,0 +1,58 @@
+<?php
+
+use Drupal;
+use Drupal\taxonomy\Entity\Term;
+use Drupal\views\ViewExecutable;
+use Drupal\Core\Menu\MenuTreeParameters;
+
+/**
+ * Implements hook_preprocess_HOOK() for page templates.
+ */
+function cfc_preprocess_page(array &$variables)
+{
+
+}
+function cfc_preprocess(&$variables, $hook)
+{
+  $route_name = \Drupal::routeMatch()->getRouteName();
+  $request = \Drupal::request();
+  $route_name = \Drupal::routeMatch()->getRouteName();
+
+  $currentLanguageCode = \Drupal::languageManager()
+    ->getCurrentLanguage()
+    ->getId();
+  $currentLanguageCode = \Drupal::languageManager()
+    ->getCurrentLanguage()
+    ->getId();
+
+  $variables['language_id'] = $currentLanguageCode;
+  $variables['language_name'] = \Drupal::languageManager()->getCurrentLanguage()->getName();
+  $variables['language_id'] = $currentLanguageCode;
+  $variables['language_name'] = \Drupal::languageManager()->getCurrentLanguage()->getName();
+
+  $variables['route_name'] = $route_name;
+
+
+}
+// function cfc_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+// // dump($form_id);
+//   if ($form_id == 'webform_submission_contact_add_form') {
+//     // dump($form['actions']['submit']['#submit']);
+//     $form['actions']['submit']['#submit'][0] = 'confirmation_message_form_submit';
+//   }
+// }
+
+// /**
+//  * Custom submit handler for the form.
+//  */
+// function confirmation_message_form_submit(&$form, \Drupal\Core\Form\FormStateInterface $form_state) {
+//   // die("test");
+//   // $image_url = file_create_url('public://image.jpg');
+
+//   $message = [
+//     '#markup' => '<div class="confirmation-message"><p>Thank you for your submission!</p>' .
+//                  '<img src="" alt="Confirmation Image" /></div>',
+//   ];
+
+//   \Drupal::messenger()->addStatus(\Drupal::service('renderer')->render($message));
+// }

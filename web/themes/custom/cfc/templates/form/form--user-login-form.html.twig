@@ -1,0 +1,23 @@
+{#
+/**
+ * @file
+ * Theme override for a login form.
+ *
+ * Available variables:
+ * - form: The form array.
+ * - attributes: HTML attributes for the form.
+ * - children: Child elements of the form.
+ *
+ * @see template_preprocess_form()
+ *
+ * @ingroup themeable
+ */
+#}
+
+<div class="login--page-abb container">
+<form{{ attributes }}>
+  {# Render form elements as needed #}
+  {{ children }}
+</form>
+
+</div>

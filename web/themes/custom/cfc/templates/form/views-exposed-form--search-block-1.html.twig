@@ -1,0 +1,35 @@
+{#
+/**
+ * @file
+ * Default theme implementation of a views exposed form.
+ *
+ * Available variables:
+ * - form: A render element representing the form.
+ *
+ * @see template_preprocess_views_exposed_form()
+ *
+ * @ingroup themeable
+ */
+#}
+{% if q is not empty %}
+  {#
+    This ensures that, if clean URLs are off, the 'q' is added first,
+    as a hidden form element, so that it shows up first in the POST URL.
+  #}
+{{ q }}
+{% endif %}
+
+<form {{ attributes }}>
+    {{ form.form_build_id }}
+    {{ form.form_id }}
+    <div class="btn-search-submit">
+        <div class="input--text">
+            {{ form.search }}
+        </div>
+
+        <div class="form-actions js-form-wrapper form-wrapper d-none">
+            {{ form.actions.submit }}
+        </div>
+    </div>
+    {{ form.form_token }}
+</form>

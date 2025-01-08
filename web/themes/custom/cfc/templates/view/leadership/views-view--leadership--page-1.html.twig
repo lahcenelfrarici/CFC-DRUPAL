@@ -1,0 +1,442 @@
+{#
+/**
+ * @file
+ * Default theme implementation for main view template.
+ *
+ * Available variables:
+ * - attributes: Remaining HTML attributes for the element.
+ * - css_name: A CSS-safe version of the view name.
+ * - css_class: The user-specified classes names, if any.
+ * - header: The optional header.
+ * - footer: The optional footer.
+ * - rows: The results of the view query, if any.
+ * - empty: The content to display if there are no rows.
+ * - pager: The optional pager next/prev links to display.
+ * - exposed: Exposed widget form/info to display.
+ * - feed_icons: Optional feed icons to display.
+ * - more: An optional link to the next page of results.
+ * - title: Title of the view, only used when displaying in the admin preview.
+ * - title_prefix: Additional output populated by modules, intended to be
+ *   displayed in front of the view title.
+ * - title_suffix: Additional output populated by modules, intended to be
+ *   displayed after the view title.
+ * - attachment_before: An optional attachment view to be displayed before the
+ *   view content.
+ * - attachment_after: An optional attachment view to be displayed after the
+ *   view content.
+ * - dom_id: Unique id for every view being printed to give unique class for
+ *   JavaScript.
+ *
+ * @see template_preprocess_views_view()
+ *
+ * @ingroup themeable
+ */
+#}
+
+<section
+	class="section-padding sc--1 sc--1--1">
+	{# <div class="fluid">
+				<div
+					class="row" id="auto">
+					<!-- Colonne gauche -->
+					<div class="col-sm-7 we-are-pad">
+						<div
+							class="marg">
+							<!-- Première image -->
+							<div
+								class="right-we-are btm--are">
+								<!-- <img src="\themes\custom\ux4mation\public\images\We are.png" alt="Logo" class="img-fluid"> -->
+								<h1>We are</h1>
+							</div>
+							<!-- Deuxième image -->
+							<div
+								class="right-we-are mt-3 btm-ux4">
+								<!-- <img src="\themes\custom\ux4mation\public\images\UX4mation.png" alt="Logo" class="img-fluid" style="width: 80%;"> -->
+								<h1>UX4mation</h1>
+							</div>
+							<!-- Texte et image dans une grille -->
+							<div class="row">
+								<div class="col-sm-4">
+									<div class="mt-5">
+
+										<div class="animate--icon position1---icon-btm">
+											<img src="\themes\custom\ux4mation\public\images\image 34.png" class="img-fluid" alt="Image 34">
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-8">
+									<div class="mt-5">
+										<p>Step into a
+											<strong>new era</strong>
+											where every
+											<strong>workflow</strong>
+											is designed to
+											<strong>elevate the experience
+											</strong>for both your employees and customers.</p>
+										<p>We craft comprehensive
+											<strong>360° experiences</strong>
+											for your team powered by the ServiceNow
+																																						                    platform, transforming human connections and fostering impactful and meaningful social and economic
+																																						                    change.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- Colonne droite -->
+					<div class="col-sm-5 custom-content we-are-img right--img-we-are-img">
+						<img src="\themes\custom\ux4mation\public\images\Group 26.png" alt="Group 26" class="img-fluid">
+						<div class="overly--img">
+							<img src="\themes\custom\ux4mation\public\images\ovel_img.png" alt="Group 26" class="img-fluid">
+						</div>
+					</div>
+				</div>
+			</div> #}
+	{{ drupal_entity('block','ux4mation_weareux4mation') }}
+</section>
+<section class="section-padding sc--1">
+
+	{{ drupal_entity('block','ux4mation_ourstory') }}
+</section>
+<section class="section-padding sc--test testmonia--wrapper">
+
+	{{ drupal_entity('block','ux4mation_foundersvision') }}
+
+</section>
+<section class="section-padding sc--Leadership">
+	<div class="container">
+		<div class="row">
+			<div
+				class="col-sm-12 mt-5">
+				{# <div class="text-center">
+
+													<h1>
+														<b>Leadership</b>
+													</h1>
+													<p>
+														DolorLorem ipsum dolor ipsum dolorLorem ipsum
+													</p>
+													<p class="mt-5">Lorem ipsum dolor ipsum dolorLorem ipsum dolor ipsum dolorLorem ipsum dolor
+																																              ipsum dolorLorem ipsum dolor ipsum dolorLorem ipsum dolor ipsum dolorLorem ipsumLorem ipsum
+																																              dolor ipsum
+														<b>
+															dolorLore.</b><br>
+														m dolorLorem ipsumLorem ipsum dolor ipsum dolorLorem ipsum dolor ipsum dolorLorem ipsum
+																																              dolor ipsum dolorLorem ipsum dolor ipsum dolorLorem ipsum dolor ipsum dolorLorem ipsumLorem
+																																              ipsum dolor ipsum dolorLorem ipsum dolor ipsum dolorLorem ipsum dolor ipsum dolorLorem ipsum
+																																              dolor ipsum.</p>
+												</div> #}
+				{{ drupal_entity('block','ux4mation_titreleadership') }}
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="section-padding sc--4">
+	<div class="fluid">
+		<div class="row">
+			<div class="col-sm-4 mt-5 we-are left--count">
+
+				{{ drupal_entity('block','ux4mation_incrementnumberleadership') }}
+			</div>
+			<div id="items-card" class="col-sm-12 container">
+				<div class="row">
+					<div class="col-sm-4"></div>
+
+					{#
+																														            <div class="col-sm-4">
+
+																														              <div class="item" id="team">
+																														                <div class="card">
+																														                  <div class="card-header">
+																														                    <img src="\themes\custom\ux4mation\public\images\testimonial.png" alt="Alan Begham">
+																														                    <div class="icon">
+																														                      <img src="\themes\custom\ux4mation\public\images\bg---cercle.png" alt="Icon">
+																														                    </div>
+																														                  </div>
+																														                  <div class="card-body">
+																														                    <h3>Alan Begham<img src="\themes\custom\ux4mation\public\images\link--link.png"></h3>
+																														                    <p class="position">/ Lorem ipsum /</p>
+																														                    <p class="description">“When I founded UX4MATION, my mission was clear—to leverage the power of the
+																														                      ServiceNow platform to drive meaningful, measurable, and sustainable change for both businesses
+																														                      and communities. Every day, I work to lead by example, ensuring that our solutions not only solve
+																														                      operational challenges but also create lasting social and economic value. My vision is to make
+																														                      technology accessible to those who need it most, empowering organizations and individuals alike to
+																														                      thrive in a digitally-driven world.
+																														                      UX4MATION is a true game-changer in the ServiceNow ecosystem because we go beyond simply
+																														                      delivering technology. We’re committed to transforming human experiences—whether it’s helping SMEs
+																														                      and nonprofits streamline operations or nurturing young talent in underserved regions. As CEO, I’m
+																														                      proud to lead a company that’s not just shaping the future of business but also making a tangible,
+																														                      positive impact on society.”</p>
+																														                  </div>
+																														                </div>
+																														              </div>
+																														            </div> #}
+					{% if rows %}
+						{{ rows }}
+					{% endif %}
+
+				</div>
+
+			</div>
+
+		</div>
+	</div>
+</section>
+
+
+<section
+	class="transform section-padding img--slider-scroll">
+
+	{# <div class="fluid we-are">
+							<div class="icon--left-left">
+								<img src="\themes\custom\ux4mation\public\images\left--icon-1.png">
+							</div>
+							<div class="row">
+								<div class="col-sm-5">
+									<h1 class="main-heading">Work environment</h1>
+									<p class="mt-3">Lorem ipsum dolor ipsum dolorLorem ipsum dolor ipsum dolorLorem ipsum dolor ipsum
+										            dolorLorem ipsum dolor ipsum dolorLorem ipsum dolor ipsum dolorLoresum dolorLore.
+
+										            m dolorLorem ipsumLorem ipsum dolor ipsum dolorLorem ipsum dolor ipsum dolorLorem ipsum dolor
+										            ipsum dolorLorem ipsum dolor ipsum dolorLorem ipsum dolor ipsum dolorLorem ipsumLorem ipsum
+										            dolor ipsum dolorLorem ipsum dolor ipsum dolorLorem ipsum dolor ipsum dolorLorem ipsum dolor
+										            ipsum.</p>
+									<img src="\themes\custom\ux4mation\public\images\certif.png" class="mt-3 img-fluid move--orizintale">
+								</div>
+								<div class="col-sm-7">
+
+									<div
+										class="container">
+										<!-- Carousel -->
+										<div
+											id="customers_work_1" class="owl-carousel">
+											<!-- Service Items -->
+											<div class="item shadow-lg   bg-white rounded service-item">
+												<div class="img--card">
+													<img src="\themes\custom\ux4mation\public\images\story.png" alt="Image 1">
+												</div>
+											</div>
+											<div class="item shadow-lg   bg-white rounded service-item">
+												<div class="img--card">
+													<img src="\themes\custom\ux4mation\public\images\story.png" alt="Image 2">
+												</div>
+											</div>
+											<div class="item shadow-lg   bg-white rounded service-item">
+												<div class="img--card">
+													<img src="\themes\custom\ux4mation\public\images\story.png" alt="Image 3">
+												</div>
+											</div>
+											<div class="item shadow-lg   bg-white rounded service-item">
+												<div class="img--card">
+													<img src="\themes\custom\ux4mation\public\images\story.png" alt="Image 4">
+												</div>
+											</div>
+										</div>
+										<!-- Custom Pagination Controls -->
+										<!-- <div class="custom-pagination">
+										              <button class="prev-btn"><i class="fas fa-arrow-left"></i></button>
+										              <span class="counter">1 of 4</span>
+										              <button class="next-btn"><i class="fas fa-arrow-right"></i></button>
+										            </div> -->
+									</div>
+
+
+								</div>
+							</div>
+						</div> #}
+	{{ drupal_entity('block','ux4mation_workenvironment') }}
+</section>
+<section
+	class="testimonials_box section-padding">
+	{# <div class="container team">
+							<div class="row">
+								<div class="col-sm-6">
+									<div>
+										<h1>Our People's
+											<br>Testimonials.</h1>
+										<h5>Inclusion and Diversity</h5>
+										<p>
+											At UX4MATION, diversity is not a box to check—it’s integral to who we are. We take deliberate actions to
+											              foster inclusion at every level, and our Great Place to Work (GPTW) certification is a testament to our
+											              dedication to employee well-being and engagement.
+										</p>
+
+										<p>Our team spans across the globe, with members from France, Morocco, Tunisia, India, and beyond. We
+											              believe that our diverse cultures enrich the UX4MATION experience, creating an environment where learning,
+											              sharing, and growth thrive through different perspectives.
+										</p>
+										<p>
+											We envision a UX4MATION world where every unique trait, personality and mindset is a stepping stone
+											              toward collective growth and success.
+
+										</p>
+										<!-- <div class="number-text left">
+										                            <span class="number left">50</span>
+										                            <span class="number left">+</span>
+										                        </div>
+										                        <h4>Satisfied client</h4> -->
+										<button type="button" class="btn mt-5" style="margin-top: 20px;width: 60%;background: linear-gradient(130deg, #792CFC 3%, #B23293 57%, #6D479C 100%);box-shadow: 0px 0px 59.6px rgba(241, 33, 119, 0.20);border-radius: 100px;">
+											<div style="padding: 5px;border-radius: 20px; border: 1px #ffffff solid;">
+												<a style="color: #ffffff;">Brandon Adams</a>
+											</div>
+										</button>
+									</div>
+								</div>
+								<div class="col-sm-6">
+									<div class="testimonial-carousel owl-carousel">
+
+										<div class="item" id="team">
+											<div class="card">
+												<div class="card-header">
+													<img src="\themes\custom\ux4mation\public\images\testimonial.png" alt="Alan Begham">
+													<div class="icon">
+														<img src="\themes\custom\ux4mation\public\images\bg---cercle.png" alt="Icon">
+													</div>
+												</div>
+												<div class="card-body">
+													<h3>Alan Begham<img src="\themes\custom\ux4mation\public\images\link--link.png"></h3>
+													<p class="position">/ Lorem ipsum /</p>
+													<p class="description">"At UX4Mation, I truly value the emphasis our
+														                    team places on open and effective communication. Regardless of the
+														                    topic, we always receive the information we need precisely when it’s
+														                    required. This culture of transparency extends to our professional
+														                    development, where our team is consistently engaged, seeking our
+														                    feedback at every stage of our career growth. Team building is a
+														                    core value at UX4Mation, creating a strong sense of collaboration
+														                    and unity among colleagues. Additionally, we are kept well-informed
+														                    about the company’s progress on various objectives, ensuring we feel
+														                    connected to the broader mission, even when certain goals may not
+														                    directly relate to our immediate responsibilities.""</p>
+												</div>
+											</div>
+										</div>
+										<div class="item" id="team">
+											<div class="card">
+												<div class="card-header">
+													<img src="\themes\custom\ux4mation\public\images\testimonial.png" alt="Alan Begham">
+													<div class="icon">
+														<img src="\themes\custom\ux4mation\public\images\bg---cercle.png" alt="Icon">
+													</div>
+												</div>
+												<div class="card-body">
+													<h3>Alan Begham<img src="\themes\custom\ux4mation\public\images\link--link.png"></h3>
+													<p class="position">/ Lorem ipsum /</p>
+													<p class="description">"At UX4Mation, I truly value the emphasis our
+														                    team places on open and effective communication. Regardless of the
+														                    topic, we always receive the information we need precisely when it’s
+														                    required. This culture of transparency extends to our professional
+														                    development, where our team is consistently engaged, seeking our
+														                    feedback at every stage of our career growth. Team building is a
+														                    core value at UX4Mation, creating a strong sense of collaboration
+														                    and unity among colleagues. Additionally, we are kept well-informed
+														                    about the company’s progress on various objectives, ensuring we feel
+														                    connected to the broader mission, even when certain goals may not
+														                    directly relate to our immediate responsibilities.""</p>
+												</div>
+											</div>
+										</div>
+										<div class="item" id="team">
+											<div class="card">
+												<div class="card-header">
+													<img src="\themes\custom\ux4mation\public\images\testimonial.png" alt="Alan Begham">
+													<div class="icon">
+														<img src="\themes\custom\ux4mation\public\images\bg---cercle.png" alt="Icon">
+													</div>
+												</div>
+												<div class="card-body">
+													<h3>Alan Begham<img src="\themes\custom\ux4mation\public\images\link--link.png"></h3>
+													<p class="position">/ Lorem ipsum /</p>
+													<p class="description">"At UX4Mation, I truly value the emphasis our
+														                    team places on open and effective communication. Regardless of the
+														                    topic, we always receive the information we need precisely when it’s
+														                    required. This culture of transparency extends to our professional
+														                    development, where our team is consistently engaged, seeking our
+														                    feedback at every stage of our career growth. Team building is a
+														                    core value at UX4Mation, creating a strong sense of collaboration
+														                    and unity among colleagues. Additionally, we are kept well-informed
+														                    about the company’s progress on various objectives, ensuring we feel
+														                    connected to the broader mission, even when certain goals may not
+														                    directly relate to our immediate responsibilities.""</p>
+												</div>
+											</div>
+										</div>
+										<div class="item" id="team">
+											<div class="card">
+												<div class="card-header">
+													<img src="\themes\custom\ux4mation\public\images\testimonial.png" alt="Alan Begham">
+													<div class="icon">
+														<img src="\themes\custom\ux4mation\public\images\bg---cercle.png" alt="Icon">
+													</div>
+												</div>
+												<div class="card-body">
+													<h3>Alan Begham<img src="\themes\custom\ux4mation\public\images\link--link.png"></h3>
+													<p class="position">/ Lorem ipsum /</p>
+													<p class="description">"At UX4Mation, I truly value the emphasis our
+														                    team places on open and effective communication. Regardless of the
+														                    topic, we always receive the information we need precisely when it’s
+														                    required. This culture of transparency extends to our professional
+														                    development, where our team is consistently engaged, seeking our
+														                    feedback at every stage of our career growth. Team building is a
+														                    core value at UX4Mation, creating a strong sense of collaboration
+														                    and unity among colleagues. Additionally, we are kept well-informed
+														                    about the company’s progress on various objectives, ensuring we feel
+														                    connected to the broader mission, even when certain goals may not
+														                    directly relate to our immediate responsibilities.""</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="animate--icon position---icon-testimonials_box">
+							<img src="\themes\custom\ux4mation\public\images\image 34.png">
+						</div> #}
+	{{ drupal_entity('block','ux4mation_section6ourpeoples') }}
+</section>
+<section
+	class="section-padding sc--media">
+	{# <div class="loops-media">
+				        <div
+				          class="media--media" id="auto">
+
+				          <!-- Colonne droite -->
+				          <div class="custom-content we-are-img media--img-media">
+				            <div class="screenshot-img">
+				              <img src="\themes\custom\ux4mation\public\images\Screenshot 2024-09-13 130148.png" alt="Group 26">
+				            </div>
+				            <div class="media--icon-media">
+				              <img src="\themes\custom\ux4mation\public\images\media--right.png" alt="Group 26">
+				            </div>
+				          </div>
+
+				          <!-- Colonne gauche -->
+				          <div class="media--img-media-2" id="media">
+
+				            <h1>Media Relations</h1>
+				            <p class="mt-3">Our media space provides the latest news about our company and the ServiceNow updates. Get access to our
+				                                    NEWSROOM and discover our major announcements: partnerships, online and offline events, global
+				                                    certifications and recognition.
+				                                    Additionally, explore a diverse range of content, from expert insights and company culture features to use
+				                                    cases and articles.
+				            </p>
+				          </b>
+
+				        </p>
+				        <a href="#">Visit us at the WORLD FORUM- NOVEMBER, 12TH</a>
+
+
+				      </div> #}
+	{{ drupal_entity('block','ux4mation_mediarelations') }}
+</section>
+<section class="wrapper--linkden">
+
+  	{{ drupal_entity('block','ux4mation_alllinkdden') }}
+</section>
+
+<!--  -->
+<section class="section-padding sc--media " id="sc--media">
+
+  	{{ drupal_entity('block','ux4mation_investorrelations') }}
+</section>

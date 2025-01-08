@@ -1,0 +1,32 @@
+{#
+/**
+ * @file
+ * Default theme implementation for a breadcrumb trail.
+ *
+ * Available variables:
+ * - breadcrumb: Breadcrumb trail items.
+ *
+ * @ingroup themeable
+ */
+#}
+
+
+{# {% if breadcrumb %}
+  <div>
+    <div class="b-breadcrumb">
+      <ul class="b-breadcrumb-list">
+        {% for item in breadcrumb %}
+          <li>
+            {% if item.url %}
+              <a href="{{ item.url }}">{{ item.text }}</a>
+            {% elseif not loop.last %}
+              {{ item.text }}
+            {% else %}
+              <strong class="b-current">{{ item.text }}</strong>
+            {% endif %}
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+{% endif %} #}

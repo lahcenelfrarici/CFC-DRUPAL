@@ -1,0 +1,44 @@
+global-css:
+  version: 1.x
+  css:
+    theme:
+      ./CFC/assets/css/all.min.css: {}
+      ./CFC/assets/css/bootstrap.min.css: {}
+      ./CFC/assets/css/owl.carousel.min.css: {}
+      ./CFC/assets/css/owl.theme.default.min.css: {}
+      ./CFC/assets/css/aos.css: {}
+      ./CFC/assets/css/slick.css: {}
+      ./CFC/assets/css/style.css: {}
+      ./CFC/assets/css/responsive.css: {}
+
+      # css/responsive.css: {}
+
+global-js:
+  version: 1.0
+  js:
+    ./CFC/assets/js/jquery-3.7.1.min.js: {}
+    ./CFC/assets/js/bootstrap.bundle.min.js: {}
+    ./CFC/assets/js/owl.carousel.min.js: {}
+    ./CFC/assets/js/slick.min.js: {}
+    ./CFC/assets/js/aos.js: {}
+    # Uncomment the lines below if you want to include these scripts
+    # ./CFC/assets/js/highmaps.js: {}
+    # ./CFC/assets/js/jquery.mapRegion.js: {}
+    ./CFC/assets/js/scripts.js: {}
+  dependencies:
+    - core/jquery
+
+
+global-css-rtl:
+  css:
+    theme:
+      css/style-rtl.css: {}
+
+global-css-responsive:
+  css:
+    theme:
+      css/responsive.css: {}
+
+# addtoany-js:
+#   js:
+#     js/page.js: {}

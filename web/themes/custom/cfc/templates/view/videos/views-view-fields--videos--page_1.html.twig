@@ -1,0 +1,54 @@
+{#
+/**
+ * @file
+ * Default view template to display all the fields in a row.
+ *
+ * Available variables:
+ * - view: The view in use.
+ * - fields: A list of fields, each one contains:
+ *   - content: The output of the field.
+ *   - raw: The raw data for the field, if it exists. This is NOT output safe.
+ *   - class: The safe class ID to use.
+ *   - handler: The Views field handler controlling this field.
+ *   - inline: Whether or not the field should be inline.
+ *   - wrapper_element: An HTML element for a wrapper.
+ *   - wrapper_attributes: List of attributes for wrapper element.
+ *   - separator: An optional separator that may appear before a field.
+ *   - label: The field's label text.
+ *   - label_element: An HTML element for a label wrapper.
+ *   - label_attributes: List of attributes for label wrapper.
+ *   - label_suffix: Colon after the label.
+ *   - element_type: An HTML element for the field content.
+ *   - element_attributes: List of attributes for HTML element for field content.
+ *   - has_label_colon: A boolean indicating whether to display a colon after
+ *     the label.
+ *   - element_type: An HTML element for the field content.
+ *   - element_attributes: List of attributes for HTML element for field content.
+ * - row: The raw result from the query, with all data it fetched.
+ *
+ * @see template_preprocess_views_view_fields()
+ *
+ * @ingroup themeable
+ */
+#}
+
+<!-- Col -->
+<div class="col-12 col-md-4 mb-4" data-aos="fade-up">
+    <div class="item--video video-item text-white bg-dark"
+        data-video-src="https://www.youtube.com/embed/{{ row._entity.field_youtube_video.value.0.video_id }}">
+        {# Construct the thumbnail URL #}
+        {% set video_id = row._entity.field_youtube_video.value.0.video_id %}
+        <img src="https://img.youtube.com/vi/{{ video_id }}/sddefault.jpg" alt="Video Thumbnail" class="video-thumbnail" onerror="this.onerror=null;this.src='https://img.youtube.com/vi/{{ video_id }}/hqdefault.jpg';">
+        <button class="btn-play" onclick="playVideo(this)">
+            <img src="/themes/custom/abb/assets/images/play--icon.png" />
+        </button>
+    </div>
+    <div class="card--body-sc listng--video-body">
+        <div class="d-flex justify-content-between">
+            <span class="badge badge-pill badge-info mt-4 mb-3">
+                {{ fields.field_category.content }}
+            </span>
+        </div>
+        <h2 class="h4">{{ fields.title.content }}</h2>
+    </div>
+</div>

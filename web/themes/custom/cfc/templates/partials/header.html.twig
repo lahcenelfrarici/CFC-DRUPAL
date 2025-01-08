@@ -1,0 +1,203 @@
+{# <header class="header-transparent">
+	<div class="container top-header">
+		<ul class="nav justify-content-end">
+
+				<li class="nav-item"> <a class="nav-link" target="_blank" href="{{facebook}}">
+					<i class="fa-brands fa-facebook-f"></i>
+				</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" target="_blank" href="{{instagram}}">
+					<i class="fa-brands fa-instagram"></i>
+				</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" target="_blank" href="{{youtube}}">
+					<i class="fa-brands fa-youtube"></i>
+				</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" target="_blank" href="{{linkedin}}">
+					<i class="fa-brands fa-linkedin-in"></i>
+				</a>
+			</li>
+			<li class="nav-item multilingue">
+				<div class="dropdown">
+					{{ drupal_entity('block','abb_selecteurdelangue') }}
+				</div>
+			</li>
+		</ul>
+	</div>
+
+	<div class="main-menu" data-sticky-class="is-sticky">
+		<div
+			class="container">
+
+			<nav class="navbar navbar-expand-lg navbar-light">
+				<div
+					class="container-fluid">
+
+					<div class="wrapper--mobile">
+						{{ drupal_entity('block','abb_site_branding') }}
+
+						<div class="btn--carer">
+							<button class="navbar-toggler">
+								<div class="flex-responsive">
+									<span class="btn-menu-left">☰
+									</span>
+								</div>
+							</button>
+						</div>
+
+					</div>
+					<div class="show_all_menu" id="navbarNavDropdown">
+						<div class="wrapper-top-mobile">
+							<div class="dropdown">
+								{{ drupal_entity('block','abb_selecteurdelangue') }}
+							</div>
+							<div>
+								<span class="burger-menu">
+									<i class="fa fa-close"></i>
+								</span>
+							</div>
+						</div>
+
+
+						{% if page.primary_menu %}
+							{{page.primary_menu}}
+						{% endif %}
+            <div class="append--search">
+
+            </div>
+
+						<button type="button" class="btn search-btn" data-bs-toggle="modal" data-bs-target="#searchModal">
+							<i class="fa-solid fa-magnifying-glass"></i>
+						</button>
+
+
+					</div>
+				</div>
+			</nav>
+
+		</div>
+		{{ drupal_entity('block','abb_formulaireexposesearchblock_1') }}
+
+	</div>
+</header>
+ #}
+  <header class="bg-white shadow-sm header--menu" data-sticky-class="is-sticky">
+    <nav class="navbar navbar-expand-lg navbar-light container">
+      <a class="navbar-brand" href="#">
+        <img src="/themes/custom/cfc/CFC/assets/images/Logo.png" alt="CFC Logo">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+      						{% if page.primary_menu %}
+							{{page.primary_menu}}
+						{% endif %}
+        {# <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/About.html">About CFC</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="whyCfcDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">Why CFC?</a>
+            <ul class="dropdown-menu" aria-labelledby="whyCfcDropdown">
+              <li><a class="dropdown-item" href="#">Doing business at best cost</a></li>
+              <li><a class="dropdown-item" href="#">Safe landing</a></li>
+              <li><a class="dropdown-item" href="#">Effortless business connections</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Africa Insights</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">What's On?</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Become a Member</a>
+          </li>
+          <!-- Multi-language Selector -->
+
+        </ul> #}
+        <ul class="multi--select">
+          <li class="nav-item dropdown">
+            <!-- <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <i class="fas fa-globe"></i> EN
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+              <li><a class="dropdown-item" href="#">EN - English</a></li>
+              <li><a class="dropdown-item" href="#">FR - Français</a></li>
+              <li><a class="dropdown-item" href="#">AR - العربية</a></li>
+            </ul> -->
+            <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <img src="/themes/custom/cfc/CFC/assets/images/en.png" alt="English Flag"
+                style="width: 20px; height: 15px; margin-right: 5px;">
+              EN
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+              <li>
+                <a class="dropdown-item" href="#">
+                  <img src="/themes/custom/cfc/CFC/assets/images/fr.png" alt="French Flag"
+                    style="width: 20px; height: 15px; margin-right: 5px;"> FR
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">
+                  <img src="/themes/custom/cfc/CFC/assets/images/ar.png" alt="Arabic Flag"
+                    style="width: 20px; height: 15px; margin-right: 5px;"> AR
+                </a>
+              </li>
+            </ul>
+          </li>
+          <!-- Contact Us Button -->
+          <li class="nav-item">
+            <a class="" href="/index.html#contact---us">
+              Contact Us<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+                <g clip-path="url(#clip0_4948_4128)">
+                  <path
+                    d="M40.7279 22.5873C41.1028 22.9623 41.3135 23.4709 41.3135 24.0013C41.3135 24.5316 41.1028 25.0402 40.7279 25.4153L29.4139 36.7293C29.2294 36.9203 29.0087 37.0727 28.7647 37.1775C28.5207 37.2823 28.2583 37.3375 27.9927 37.3398C27.7271 37.3421 27.4638 37.2915 27.218 37.1909C26.9722 37.0903 26.7489 36.9418 26.5611 36.7541C26.3733 36.5663 26.2248 36.343 26.1243 36.0972C26.0237 35.8514 25.9731 35.588 25.9754 35.3225C25.9777 35.0569 26.0329 34.7945 26.1377 34.5505C26.2425 34.3065 26.3949 34.0858 26.5859 33.9013L34.4859 26.0013H7.9999C7.46947 26.0013 6.96076 25.7906 6.58569 25.4155C6.21062 25.0404 5.9999 24.5317 5.9999 24.0013C5.9999 23.4708 6.21062 22.9621 6.58569 22.5871C6.96076 22.212 7.46947 22.0013 7.9999 22.0013H34.4859L26.5859 14.1013C26.2216 13.7241 26.02 13.2189 26.0246 12.6945C26.0291 12.1701 26.2395 11.6684 26.6103 11.2976C26.9811 10.9268 27.4827 10.7165 28.0071 10.7119C28.5315 10.7074 29.0367 10.9089 29.4139 11.2733L40.7279 22.5873Z"
+                    fill="url(#paint0_linear_4948_4128)" />
+                </g>
+                <defs>
+                  <linearGradient id="paint0_linear_4948_4128" x1="23.6567" y1="37.3398" x2="25.6881" y2="13.0491"
+                    gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#009681" />
+                    <stop offset="1" stop-color="#007565" />
+                  </linearGradient>
+                  <clipPath id="clip0_4948_4128">
+                    <rect width="48" height="48" fill="white" transform="matrix(0 -1 -1 0 48 48)" />
+                  </clipPath>
+                </defs>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+{# <div class="wrapper-accessibilty">
+      <div class="list-social-sticky">
+        <ul>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fa-brands fa-facebook-f"></i><span>Facebook</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fa-brands fa-x-twitter"></i><span>Twitter</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fa-brands fa-youtube"></i><span><span>Youtube</span></span></a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fa-brands fa-instagram"></i><span>Instagram</span></a>
+          </li>
+        </ul>
+      </div>
+    </div> #}
+		{# {{ drupal_entity('block','ux4mation_wrapperaccessibilty') }} #}
