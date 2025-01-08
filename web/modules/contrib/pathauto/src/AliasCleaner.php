@@ -242,7 +242,7 @@ class AliasCleaner implements AliasCleanerInterface {
     $output = strtr($output, $this->cleanStringCache['punctuation']);
 
     // Optionally transliterate.
-    if ($this->cleanStringCache['transliterate'] && $langcode != 'ar') {
+    if ($this->cleanStringCache['transliterate']) {
       // If the reduce strings to letters and numbers is enabled, don't bother
       // replacing unknown characters with a question mark. Use an empty string
       // instead.

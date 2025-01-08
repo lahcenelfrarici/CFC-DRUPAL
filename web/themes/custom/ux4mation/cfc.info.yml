@@ -1,15 +1,15 @@
-name: ux4mation
+name: cfc
 type: theme
-description: A custom theme from ux4mation
+description: A custom theme from cfc
 core_version_requirement: ^9 || ^10
 base theme: false
 package: Core
 version: VERSION
 
 libraries:
-  - ux4mation/global-css
-  - ux4mation/global-js
-  - ux4mation/addtoany-js
+  - cfc/global-css
+  - cfc/global-js
+  - cfc/addtoany-js
 
 regions:
   top_header: Top header

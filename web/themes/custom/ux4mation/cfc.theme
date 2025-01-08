@@ -8,11 +8,11 @@ use Drupal\Core\Menu\MenuTreeParameters;
 /**
  * Implements hook_preprocess_HOOK() for page templates.
  */
-function ux4mation_preprocess_page(array &$variables)
+function cfc_preprocess_page(array &$variables)
 {
 
 }
-function ux4mation_preprocess(&$variables, $hook)
+function cfc_preprocess(&$variables, $hook)
 {
   $route_name = \Drupal::routeMatch()->getRouteName();
   $request = \Drupal::request();
@@ -34,7 +34,7 @@ function ux4mation_preprocess(&$variables, $hook)
 
 
 }
-// function ux4mation_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+// function cfc_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
 // // dump($form_id);
 //   if ($form_id == 'webform_submission_contact_add_form') {
 //     // dump($form['actions']['submit']['#submit']);
