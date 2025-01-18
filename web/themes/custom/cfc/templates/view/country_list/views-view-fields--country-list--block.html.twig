@@ -21,10 +21,7 @@
  */
 #}
 {% set youtubeUrl = fields.field_country_name.content|raw|striptags %}
-    <div data-value="{{ youtubeUrl|trim }}"
->
-      <img src="{{ file_url(row._entity.field_flag_image.entity.fileuri) }}" alt="{{ row.content['#country_name'] }}" width="20" height="15" />
-      <span>{{fields.field_country_name.content }}</span>
-    </div>
-
-
+<div data-value="{{ youtubeUrl|trim }}">
+	<img src="{{ file_url(row._entity.field_flag_image.entity.fileuri) }}" alt="{{ row.content['#country_name'] }}" width="20" height="15"/>
+	<span>{{fields.field_country_name.content }}</span>
+</div>
