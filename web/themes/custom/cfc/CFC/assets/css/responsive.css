@@ -85,7 +85,7 @@
   }
 
   section.global_investment p {
-    font-size: 18px;
+    font-size: 18px;!;!importan;!i;!;
   }
 
   .custom-card h4 {
@@ -325,52 +325,237 @@
     object-fit: cover;
   }
 }
+
 @media (min-width: 992px) {
+
   .members .slick-slide.count-7,
-  .members .slick-slide:nth-child(7n+7):not([class*="count-"]) { margin-top: 170px; }
+  .members .slick-slide:nth-child(7n+7):not([class*="count-"]) {
+    margin-top: 170px;
+  }
+
   .members .slick-slide.count-1,
-.members .slick-slide:nth-child(7n+1):not([class*="count-"]) {
-  margin-top: 170px;
+  .members .slick-slide:nth-child(7n+1):not([class*="count-"]) {
+    margin-top: 170px;
+  }
+
+  .members .slick-slide.count-4,
+  .members .slick-slide:nth-child(7n+4):not([class*="count-"]) {
+    margin-top: 80px;
+    margin-bottom: 110px;
+  }
+
 }
 
-.members .slick-slide.count-4,
-.members .slick-slide:nth-child(7n+4):not([class*="count-"]) {
-  margin-top: 80px;
-  margin-bottom: 110px;
-}
-
-}
 @media (max-width: 991px) {
+  
+.ledt--sidbar-click {
+  width: 100%;
+}
+.element--wrapper-enter .content > div {
+  flex-direction: column;
+  gap: 20px 0 !important;
+}
+.top-tabs button {
+  padding: 15px;
+}
+.items--elements-ll #acc-card-6-column .card .card-header {
+  padding: 0;
+}
+.items--elements-ll #acc-card-6-column .card .card-body {
+  line-height: normal;
+  padding: 20px;
+}
+
+.two-column-list {
+  flex-direction: column;
+}
+.each-event:nth-child(2n+1) {
+  margin-left: 0;
+}
+.all__telecharger_timeline {
+  padding: 20px;
+}
+.all__telecharger_timeline .header {
+  flex-direction: column;
+}
+.all__telecharger_timeline .header a {
+  line-height: 33px;
+  text-align: left;
+  font-size: 22px;
+}
+.each-event {
+  width: 100%;
+}
+#sticky-sidebar {
+  margin: 0;
+}
+.wrapper {
+  padding: 0;
+}
+
+.each-event:after {
+  opacity: 0;
+}
+
+.sidebar a svg {
+  margin: 0 10px;
+}
+.element--tabs-sc h3 {
+  font-size: 44px;
+}
+.all--select-maps-layout {
+  gap: 2px;
+}
+.all--select-maps-layout h2 {
+  font-size: 38px;
+  line-height: normal;
+}
+  /*  */
+  
+.item-info {
+  width: 315px;
+  left: 0 !important;
+  right: 0 !important;
+  margin: auto;
+}
+.item-info-content .wrapper-element-africa form {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  margin: 4px 0 !important;
+  padding: 0;
+  gap: 0 13px;
+}
+.item-info .tabs---1,.item-info .tabs---2 {
+  font-size: 10px !important;
+}
+.item-info-content .wrapper-element-africa form button {
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  line-height: normal;
+}
+.item-info-content .wrapper-element-africa input {
+  width: 60%;
+  height: 35px;
+}
+  /*  */
+  
+
+.img-1-maps {
+
+  overflow-x: scroll;
+  white-space: nowrap;
+  overflow: auto;
+  display: flex;
+  overflow-x: auto;
+  display: flex;
+  flex-direction: column;
+  max-width: 450px;
+}
+.img-1-maps svg {
+  width: 913px;
+}
+  .wrapper--logo-after-maps { padding: 15px; text-align: center; }
+  .banner_status_img img { object-fit: cover; }
+
+  html,
+  body {
+    height: auto;
+  }
+
+  .three_colmun_to_sc .tabs--item button,
+  .three_colmun_to_sc .tabs--item a {
+    width: 100%;
+    gap: 0 11px;
+  }
+
+  .all--select-maps-layout {
+    max-width: 100%;
+  }
+
+  .three_colmun_to_sc .container-layout {
+    padding: 20px;
+  }
+
+  .all--select-maps-layout div#country-select {
+    width: 100%;
+  }
+
+  .three_colmun_to_sc .container-layout .map-container {
+    max-width: 100%;
+  }
+
+  .width--img-inc .row.stats-container {
+    padding: 20px;
+    text-align: center;
+  }
+
+  .paginations-list li a {
+    width: 35px;
+    height: 35px;
+    font-size: 16px;
+  }
+
+  .paginations-list .pagination-success {
+    padding: 0;
+  }
+
+  .filter-wp form {
+    flex-direction: column;
+  }
+
+  .filter-champs {
+    width: 100%;
+  }
+
+  .filter-champs.submit-filter {
+    width: 100%;
+  }
+
+  .filter-wp form {
+    gap: 25px 0;
+  }
+
+  .wrapper-title-filter {
+    padding-bottom: 30px;
+  }
+
+  .width--img-inc .row-column-width--img-inc:first-child .col-md-3 .icon-box p {
+    text-align: center;
+  }
+
   .slider-navigation {
     flex-wrap: wrap;
     position: relative;
-}
+  }
 
-.slider-navigation button.slick-prev.slick-arrow {
+  .slider-navigation button.slick-prev.slick-arrow {
     /* display: none; */
-}
+  }
 
-.slick-dots-container {
+  .slick-dots-container {
     display: none;
-}
+  }
 
-#filter-verticale .filters {
+  #filter-verticale .filters {
     flex-direction: column;
     gap: 30px 0;
-}
+  }
 
-#filter-verticale .filters >div {
+  #filter-verticale .filters>div {
     width: 100%;
-}
+  }
 
-#filter-verticale .members .slick-track {
+  #filter-verticale .members .slick-track {
     height: 241px;
     margin-top: 9% !important;
-}
+  }
 
-.members {
+  .members {
     padding: 0;
-}
+  }
+
   .stats-container>div {
     width: 100%;
   }
@@ -387,10 +572,11 @@
     text-align: center;
     justify-content: center;
     align-items: center;
+    padding: 0;
   }
 
   .width--img-inc .row-column-width--img-inc:first-child .col-md-3 .icon-box p {
-    text-align: center;
+    text-align: center !important;!i;!;
   }
 
   .width--img-inc .row.stats-container {
@@ -403,6 +589,7 @@
 
   .paragraph--african_insights p {
     font-size: 20px;
+    padding: 0 15px;
   }
 
   .tabs--item button {
@@ -411,8 +598,8 @@
   }
 
   .tabs--item button svg {
-    height: 50px;
-    width: 50px;
+    height: 35px;
+    width: 35px;
     object-fit: inherit;
   }
 
@@ -479,6 +666,7 @@
 
   .values--meteo h4 {
     gap: 0 12px;
+    flex-direction: column;
   }
 
   .values-section>div {
@@ -488,7 +676,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: row;
+    flex-direction: column;
   }
 
   .tabs--item {
@@ -718,7 +906,7 @@
   }
 
   .banner_status_img h2 {
-    font-size: 40px;
+    font-size: 35px;
     line-height: normal;
   }
 
@@ -868,29 +1056,30 @@
   ul.multi--select .dropdown ul.dropdown-menu.show {
     display: block;
   }
+
   .stats-container>div {
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-}
+  }
 
-.counter--number {
+  .counter--number {
     text-align: center;
     justify-content: center;
     width: 100%;
     align-items: center;
     margin-top: 21px;
-}
+  }
 
-.counter--number p {
+  .counter--number p {
     font-size: 25px;
     text-align: center;
-}
+  }
 
-.img-counter {
+  .img-counter {
     height: auto;
-}
+  }
 }
 
 @media (max-width: 767px) {
@@ -983,7 +1172,8 @@
 
   .title-primary-sc h2 {
     font-size: 35px;
-    padding: 0 10px;
+    padding: 0;
+    text-align: center;
     line-height: normal;
   }
 
@@ -1108,6 +1298,7 @@
 
   .banner_status_img {
     height: 300px;
+    object-fit: cover;
   }
 
   .member {

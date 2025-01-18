@@ -9,7 +9,9 @@ global-css:
       ./CFC/assets/css/aos.css: {}
       ./CFC/assets/css/slick.css: {}
       ./CFC/assets/css/style.css: {}
+      ./CFC/assets/css/style_dr.css: {}
       ./CFC/assets/css/responsive.css: {}
+
 
       # css/responsive.css: {}
 
