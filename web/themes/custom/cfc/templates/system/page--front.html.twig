@@ -49,50 +49,42 @@
 {% include "@cfc/partials/header.html.twig" %}
 
 <main id="main-content">
-	<section>
-		<div class="slider-homes" id="slider-mobisl">
-			{{ drupal_entity('block','ux4mation_slderhp') }}
-		</div>
-	</section>
-	<section class="section-padding sc--1">
+   {{ drupal_view('country_list','block_1') }}
 
-		{{ drupal_entity('block','ux4mation_section2partner') }}
 
-	</section>
+	{# <section class="logo">
+			{{ drupal_entity('block','ux4mation_section3logoslider') }}
+		</section>
+		<section class="services section-padding">
+			{{ drupal_entity('block','ux4mation_section4services') }}
+		</section>
+		<section class="transform section-padding">
+			{{ drupal_entity('block','ux4mation_section5transformhuman') }}
+		</section>
+		<section class="testimonials_box section-padding">
+			{{ drupal_entity('block','ux4mation_section6ourpeoples') }}
+		</section>
+		<section class="Stories___client section-padding">
+			{{ drupal_entity('block','ux4mation_section7logoslider') }}
+		</section>
 
-	<section class="logo">
-		{{ drupal_entity('block','ux4mation_section3logoslider') }}
-	</section>
-	<section class="services section-padding">
-		{{ drupal_entity('block','ux4mation_section4services') }}
-	</section>
-	<section class="transform section-padding">
-		{{ drupal_entity('block','ux4mation_section5transformhuman') }}
-	</section>
-	<section class="testimonials_box section-padding">
-		{{ drupal_entity('block','ux4mation_section6ourpeoples') }}
-	</section>
-	<section class="Stories___client section-padding">
-		{{ drupal_entity('block','ux4mation_section7logoslider') }}
-	</section>
-
-	<section class="logo section-padding">
-  		{{ drupal_entity('block','ux4mation_section9logoslider') }}
-  </section>
-	<section class="section-padding sc--test">
-    		{{ drupal_entity('block','ux4mation_section8clientstestimonials') }}
-  </section>
-	<section class="section-padding work--with">
-    		{{ drupal_entity('block','ux4mation_section10work') }}
-	</section>
-	<section class="section-padding cellele">
-      		{{ drupal_entity('block','ux4mation_section11senioruxuidesigner') }}
-  </section>
-	{# <section class="sc--footer-linkdden">
+		<section class="logo section-padding">
+	  		{{ drupal_entity('block','ux4mation_section9logoslider') }}
+	  </section>
+		<section class="section-padding sc--test">
+	    		{{ drupal_entity('block','ux4mation_section8clientstestimonials') }}
+	  </section>
+		<section class="section-padding work--with">
+	    		{{ drupal_entity('block','ux4mation_section10work') }}
+		</section>
+		<section class="section-padding cellele">
+	      		{{ drupal_entity('block','ux4mation_section11senioruxuidesigner') }}
+	  </section> #}
+{# <section class="sc--footer-linkdden">
 										          </section> #}
 	{# {% if page.home_center %}
 
-																									      {{ page.home_center }}
-																									    {% endif %} #}
+																										      {{ page.home_center }}
+																										    {% endif %} #}
 </main>
 {% include "@cfc/partials/footer.html.twig" %}

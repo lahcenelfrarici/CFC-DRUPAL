@@ -56,3 +56,21 @@ function cfc_preprocess(&$variables, $hook)
 
 //   \Drupal::messenger()->addStatus(\Drupal::service('renderer')->render($message));
 // }
+/**
+ * Implements hook_preprocess_HOOK() for block templates.
+ */
+function cfc_preprocess_block(array &$variables) {
+  // Check if the block is from a view.
+  if (!empty($variables['elements']['#view'])) {
+    // Print the name of the hook for the block being rendered.
+    if (module_exists('devel')) {
+      dpm('Block hook: ' . __FUNCTION__); // Display the hook name.
+      dpm($variables); // Optionally display the block variables.
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for page templates.
+ */
+
