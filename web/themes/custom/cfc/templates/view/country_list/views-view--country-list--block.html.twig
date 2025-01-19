@@ -21,7 +21,7 @@
 
 				<div class="custom-select" id="country-select">
 					<div class="select-selected">
-						<img src="./assets/images/mdi_world.png" alt="US Flag"/>
+						<img src="/themes/custom/cfc/CFC/assets/images/mdi_world.png" alt="US Flag"/>
 						<span>All countries</span>
 					</div>
 					{# <div class="select-items">
@@ -61,31 +61,9 @@
 				          <li><button class="categoryFilter" data-category="law">Law Consulting</button></li>
 				          <li><button class="categoryFilter" data-category="services">Other Services</button></li>
 				        </ul> -->
-				<div class="custom-select" id="industry-select">
-					<div class="select-selected">
-						<span>All industries</span>
-					</div>
-					<div class="select-items">
-						<div data-category="all">
-							<span>All industries</span>
-						</div>
-						<div data-category="banks">
-							<span>Banks & Insurance</span>
-						</div>
-						<div data-category="multinational">
-							<span>Multinationals</span>
-						</div>
-						<div data-category="asset">
-							<span>Asset Management</span>
-						</div>
-						<div data-category="law">
-							<span>Law Consulting</span>
-						</div>
-						<div data-category="services">
-							<span>Other Services</span>
-						</div>
-					</div>
-				</div>
+
+          {{ drupal_view('all_industries','block_1') }}
+
 				<div class="search--bar-1">
 					<input type="text" id="searchFilter" placeholder="Search by name">
 					<svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewbox="0 0 23 23" fill="none">
